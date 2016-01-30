@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name: Custom Post Type Class
+ * Custom Post Type Class
  *
  * Used to help create custom post types for Wordpress.
  * @link http://github.com/jjgrainger/wp-custom-post-type-class/
