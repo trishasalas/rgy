@@ -1,22 +1,22 @@
 {
-  "name": "hm-base",
-  "version": "0.1.0",
+  "name": "rgy",
+  "version": "1.0.0",
   "main": "Gruntfile.js",
-  "author": "Human Made Limited",
+  "author": "Trisha Salas",
   "license": "GPL V2",
   "repository": {
     "type": "git",
-    "url": "git://github.com/humanmade/hm-base.git"
+    "url": ""
   },
   "bugs": {
-    "url": "https://github.com/humanmade/hm-base/issues"
+    "url": ""
   },
   "devDependencies": {
     "grunt": "~0.4.1",
-    "grunt-contrib-uglify": "~0.2.2",
     "grunt-contrib-cssmin": "~0.6.1",
-    "grunt-sass": "~0.6.1",
-    "grunt-contrib-watch": "~0.5.3"
+    "grunt-contrib-uglify": "~0.2.2",
+    "grunt-contrib-watch": "~0.5.3",
+    "grunt-sass": "^1.1.0"
   },
   "themesDir": "content/themes"
 }

@@ -19,7 +19,7 @@ module.exports = function( grunt ) {
 					beautify: true
 				},
 				files: {
-					'<%= pkg.themesDir %>/hm-base-theme/assets/js/theme.js': ['<%= pkg.themesDir %>/hm-base-theme/assets/js/src/script1.js']
+					'<%= pkg.themesDir %>/rgy-theme/assets/js/theme.js': ['<%= pkg.themesDir %>/rgy-theme/assets/js/src/script1.js']
 				}
 			},
 
@@ -30,7 +30,7 @@ module.exports = function( grunt ) {
 					mangle: { except: ['jQuery'] }
 				},
 				files: {
-					'<%= pkg.themesDir %>/hm-base-theme/assets/js/theme.min.js': ['<%= pkg.themesDir %>/hm-base-theme/assets/js/src/script1.js']
+					'<%= pkg.themesDir %>/rgy-theme/assets/js/theme.min.js': ['<%= pkg.themesDir %>/rgy-theme/assets/js/src/script1.js']
 				}
 			}
 
@@ -41,7 +41,7 @@ module.exports = function( grunt ) {
 
 			compile: {
 				files: {
-					'<%= pkg.themesDir %>/hm-base-theme/assets/css/theme.css' : '<%= pkg.themesDir %>/hm-base-theme/assets/css/scss/theme.scss'
+					'<%= pkg.themesDir %>/rgy-theme/assets/css/theme.css' : '<%= pkg.themesDir %>/rgy-theme/assets/css/scss/theme.scss'
 				}
 			}
 
@@ -57,7 +57,7 @@ module.exports = function( grunt ) {
 				},
 
 				files: {
-					'<%= pkg.themesDir %>/hm-base-theme/assets/css/theme.min.css': ['<%= pkg.themesDir %>/hm-base-theme/assets/css/theme.css']
+					'<%= pkg.themesDir %>/rgy-theme/assets/css/theme.min.css': ['<%= pkg.themesDir %>/rgy-theme/assets/css/theme.css']
 				}
 
 			}
@@ -68,7 +68,7 @@ module.exports = function( grunt ) {
 		watch:  {
 
 			sass: {
-				files: ['<%= pkg.themesDir %>/hm-base-theme/assets/css/*/**/*.scss'],
+				files: ['<%= pkg.themesDir %>/rgy-theme/assets/css/*/**/*.scss'],
 				tasks: ['sass', 'cssmin'],
 				options: {
 					debounceDelay: 500,
@@ -77,7 +77,7 @@ module.exports = function( grunt ) {
 			},
 
 			scripts: {
-				files: ['<%= pkg.themesDir %>/hm-base-theme/assets/js/*/**/*.js'],
+				files: ['<%= pkg.themesDir %>/rgy-theme/assets/js/*/**/*.js'],
 				tasks: ['uglify'],
 				options: {
 					debounceDelay: 500
