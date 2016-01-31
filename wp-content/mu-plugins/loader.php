@@ -12,8 +12,7 @@ if ( ( defined( 'WP_INSTALLING' ) && WP_INSTALLING ) )
 	return;
 
 $hm_mu_plugins = array(
-	's3-uploads/s3-uploads.php',
-	'mandrill-wp-mail/mandrill-wp-mail.php',
+	'wp-custom-post-type-class/post-types.php',
 	'custom-meta-boxes/custom-meta-boxes.php'
 );
 
