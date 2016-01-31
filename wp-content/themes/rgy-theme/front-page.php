@@ -14,7 +14,7 @@
 
 get_header(); ?>
 
-<section id="hero" class="hero">
+<section id="masthead" class="masthead">
 
 
 </section>
