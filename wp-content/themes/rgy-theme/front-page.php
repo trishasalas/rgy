@@ -14,6 +14,19 @@
 
 get_header(); ?>
 
+<section id="hero" class="hero">
+
+
+</section>
+
+<section class="featured" class="featured">
+
+</section>
+
+<section id="grid-nav" class="grid-nav">
+
+</section>
+
 
 <?php
 get_footer();

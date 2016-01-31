@@ -55,7 +55,7 @@ function hmbase_scripts_styles() {
 	$version = hmbase_get_theme_version();
 	$postfix = ( hmbase_is_dev() ) ? '' : '.min';
 
-	wp_enqueue_script( 'hmbase-theme', get_template_directory_uri() . "/assets/js/theme{$postfix}.js", array(), $version, true );
+	wp_enqueue_script( 'hmbase-theme', get_template_directory_uri() . "/assets/js/theme{$postfix}.js", array( 'jquery' ), $version, true );
 
 	wp_enqueue_style( 'hmbase-theme', get_template_directory_uri() . "/assets/css/theme{$postfix}.css", array(), $version );
 

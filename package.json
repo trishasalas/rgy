@@ -1,15 +1,12 @@
 {
-  "name": "rgy",
+  "name": "rgy-theme",
   "version": "1.0.0",
   "main": "Gruntfile.js",
   "author": "Trisha Salas",
   "license": "GPL V2",
   "repository": {
     "type": "git",
-    "url": ""
-  },
-  "bugs": {
-    "url": ""
+    "url": "ssh://codeserver.dev.4129fe69-8528-42af-a037-f40fd487dfa1@codeserver.dev.4129fe69-8528-42af-a037-f40fd487dfa1.drush.in:2222/~/repository.git"
   },
   "devDependencies": {
     "grunt": "~0.4.1",
@@ -18,5 +15,5 @@
     "grunt-contrib-watch": "~0.5.3",
     "grunt-sass": "^1.1.0"
   },
-  "themesDir": "content/themes"
+  "themesDir": "wp-content/themes"
 }

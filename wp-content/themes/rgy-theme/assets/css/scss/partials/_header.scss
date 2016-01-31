@@ -1,0 +1,26 @@
+.site-header {
+  @include container;
+  position: relative;
+  padding: 70px 0;
+
+  .main-navigation {
+	position: absolute;
+	top: 70px;
+	left: 70px;
+
+  }
+
+  .logo {
+	width: 531px;
+	margin: 0 auto;
+  }
+
+  .contact-info {
+	position: absolute;
+	top: 70px;
+	right: 70px;
+
+  }
+
+
+}
