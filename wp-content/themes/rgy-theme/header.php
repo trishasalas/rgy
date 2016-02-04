@@ -35,15 +35,23 @@
 
 <body>
 <header id="masthead" class="site-header" role="banner">
-	<nav id="site-navigation" class="main-navigation" role="navigation">
-		<img src="<?php echo get_template_directory_uri();?>/assets/images/Menu-icon.png" alt="menu icon"><span style="display:none;"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?></span>
-	</nav><!-- #site-navigation -->
+
+	<div id="toggle" class="nav-icon"><span></span></div>
 
 	<div class="logo">
 		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri();?>/assets/images/logo.png" alt="logo"></a>
 	</div>
 
 	<div class="contact-info">
-		<img src="<?php echo get_template_directory_uri();?>/assets/images/Contact-icon.png" alt="contact icon">
+		<?php echo contact_page_link();?>
+
 	</div>
 </header><!-- #masthead -->
+
+<nav id="site-navigation" class="main-navigation" role="navigation">
+	<?php wp_nav_menu( array(
+		'theme_location' => 'primary',
+		'menu_class'     => 'primary-menu',
+	) );
+	?>
+</nav><!-- #site-navigation -->

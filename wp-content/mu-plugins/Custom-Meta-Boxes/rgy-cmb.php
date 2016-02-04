@@ -72,50 +72,94 @@ function rgy_retreat_metaboxes( array $meta_boxes ) {
 		)
 	);
 
-	// Home page Explore
-	$meta_boxes[] = array(
-		'title' => 'Explore',
-		'pages' => 'page',
-		'show_on' => array( 'id' => array( 6 ) ),
-		'fields' => array(
-			array( 'id' => 'gac-5', 'name' => 'Group (8 columns)', 'type' => 'group', 'cols' => 4, 'fields' => array(
-				array( 'id' => 'gac-4-f-1',  'name' => 'Link', 'type' => 'text' ),
-				array( 'id' => 'gac-4-f-2',  'name' => 'Image', 'type' => 'image' ),
-			) ),
-			array( 'id' => 'gac-5', 'name' => 'Group (8 columns)', 'type' => 'group', 'cols' => 4, 'fields' => array(
-				array( 'id' => 'gac-4-f-3',  'name' => 'Link', 'type' => 'text' ),
-				array( 'id' => 'gac-4-f-4',  'name' => 'Image', 'type' => 'image' ),
-			) ),
-			array( 'id' => 'gac-5', 'name' => 'Group (8 columns)', 'type' => 'group', 'cols' => 4, 'fields' => array(
-				array( 'id' => 'gac-4-f-5',  'name' => 'Link', 'type' => 'text' ),
-				array( 'id' => 'gac-4-f-6',  'name' => 'Image', 'type' => 'image' ),
-			) ),
-			array( 'id' => 'gac-5', 'name' => 'Group (8 columns)', 'type' => 'group', 'cols' => 4, 'fields' => array(
-				array( 'id' => 'gac-4-f-7',  'name' => 'Link', 'type' => 'text' ),
-				array( 'id' => 'gac-4-f-8',  'name' => 'Image', 'type' => 'image' ),
-			) ),
-			array( 'id' => 'gac-5', 'name' => 'Group (8 columns)', 'type' => 'group', 'cols' => 4, 'fields' => array(
-				array( 'id' => 'gac-4-f-9',  'name' => 'Link', 'type' => 'text' ),
-				array( 'id' => 'gac-4-f-10',  'name' => 'Image', 'type' => 'image' ),
-			) ),
-			array( 'id' => 'gac-5', 'name' => 'Group (8 columns)', 'type' => 'group', 'cols' => 4, 'fields' => array(
-				array( 'id' => 'gac-4-f-11',  'name' => 'Link', 'type' => 'text' ),
-				array( 'id' => 'gac-4-f-12',  'name' => 'Image', 'type' => 'image' ),
-			) ),
-			array( 'id' => 'gac-5', 'name' => 'Group (8 columns)', 'type' => 'group', 'cols' => 4, 'fields' => array(
-				array( 'id' => 'gac-4-f-13',  'name' => 'Link', 'type' => 'text' ),
-				array( 'id' => 'gac-4-f-14',  'name' => 'Image', 'type' => 'image' ),
-			) ),
-			array( 'id' => 'gac-5', 'name' => 'Group (8 columns)', 'type' => 'group', 'cols' => 4, 'fields' => array(
-				array( 'id' => 'gac-4-f-15',  'name' => 'Link', 'type' => 'text' ),
-				array( 'id' => 'gac-4-f-16',  'name' => 'Image', 'type' => 'image' ),
-			) ),
-			array( 'id' => 'gac-5', 'name' => 'Group (8 columns)', 'type' => 'group', 'cols' => 4, 'fields' => array(
-				array( 'id' => 'gac-4-f-17',  'name' => 'Link', 'type' => 'text' ),
-				array( 'id' => 'gac-4-f-18',  'name' => 'Image', 'type' => 'image' ),
-			) ),
-		)
-	);
+//	// Home page Explore
+//	$meta_boxes[] = array(
+//		'title' => 'Explore',
+//		'pages' => 'page',
+//		'show_on' => array( 'id' => array( 6 ) ),
+//		'fields' => array(
+//			array(
+//				'id' => 'explore-1-1',
+//				'name' => 'Grid Item',
+//				'type' => 'group',
+//				'cols' => 4,
+//				'fields' => array(
+//					array( 'id' => 'link-1-1',  'name' => 'Link', 'type' => 'text' ),
+//					array( 'id' => 'image-1-1',  'name' => 'Image', 'type' => 'image', 'size' => 'height=250&width=250&crop=1' ),
+//			) ),
+//			array(
+//				'id' => 'explore-1-2',
+//				'name' => 'Grid Item',
+//				'type' => 'group',
+//				'cols' => 4,
+//				'fields' => array(
+//					array( 'id' => 'gac-4-f-3',  'name' => 'Link', 'type' => 'text' ),
+//					array( 'id' => 'gac-4-f-4',  'name' => 'Image', 'type' => 'image', 'size' => 'height=250&width=250&crop=1' ),
+//			) ),
+//			array(
+//				'id' => 'explore-1-3',
+//				'name' => 'Grid Item',
+//				'type' => 'group',
+//				'cols' => 4,
+//				'fields' => array(
+//					array( 'id' => 'gac-4-f-5',  'name' => 'Link', 'type' => 'text' ),
+//					array( 'id' => 'gac-4-f-6',  'name' => 'Image', 'type' => 'image' , 'size' => 'height=250&width=250&crop=1'),
+//			) ),
+//			array(
+//				'id' => 'explore-2-1',
+//				'name' => 'Grid Item',
+//				'type' => 'group', 'cols' => 4,
+//				'fields' => array(
+//					array( 'id' => 'gac-4-f-7',  'name' => 'Link', 'type' => 'text' ),
+//					array( 'id' => 'gac-4-f-8',  'name' => 'Image', 'type' => 'image', 'size' => 'height=250&width=250&crop=1' ),
+//			) ),
+//			array(
+//				'id' => 'explore-2-2',
+//				'name' => 'Grid Item',
+//				'type' => 'group',
+//				'cols' => 4,
+//				'fields' => array(
+//					array( 'id' => 'gac-4-f-9',  'name' => 'Link', 'type' => 'text' ),
+//					array( 'id' => 'gac-4-f-10',  'name' => 'Image', 'type' => 'image', 'size' => 'height=250&width=250&crop=1' ),
+//			) ),
+//			array(
+//				'id' => 'explore-2-3',
+//				'name' => 'Grid Item',
+//				'type' => 'group',
+//				'cols' => 4,
+//				'fields' => array(
+//					array( 'id' => 'gac-4-f-11',  'name' => 'Link', 'type' => 'text' ),
+//					array( 'id' => 'gac-4-f-12',  'name' => 'Image', 'type' => 'image' , 'size' => 'height=250&width=250&crop=1'),
+//			) ),
+//			array(
+//				'id' => 'explore-3-1',
+//				'name' => 'Grid Item',
+//				'type' => 'group',
+//				'cols' => 4,
+//				'fields' => array(
+//					array( 'id' => 'gac-4-f-13',  'name' => 'Link', 'type' => 'text' ),
+//					array( 'id' => 'gac-4-f-14',  'name' => 'Image', 'type' => 'image', 'size' => 'height=250&width=250&crop=1' ),
+//			) ),
+//			array(
+//				'id' => 'explore-3-2',
+//				'name' => 'Grid Item',
+//				'type' => 'group',
+//				'cols' => 4,
+//				'fields' => array(
+//					array( 'id' => 'gac-4-f-15',  'name' => 'Link', 'type' => 'text' ),
+//					array( 'id' => 'gac-4-f-16',  'name' => 'Image', 'type' => 'image' , 'size' => 'height=250&width=250&crop=1'),
+//			) ),
+//			array(
+//				'id' => 'explore-3-3',
+//				'name' => 'Grid Item',
+//				'type' => 'group',
+//				'cols' => 4,
+//				'fields' => array(
+//					array( 'id' => 'gac-4-f-17',  'name' => 'Link', 'type' => 'text' ),
+//					array( 'id' => 'gac-4-f-18',  'name' => 'Image', 'type' => 'image' , 'size' => 'height=250&width=250&crop=1'),
+//			) ),
+//		)
+//	);
 
 	return $meta_boxes;
 

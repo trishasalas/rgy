@@ -119,3 +119,72 @@ function rgy_category_transient_flusher() {
 }
 add_action( 'edit_category', 'rgy_category_transient_flusher' );
 add_action( 'save_post',     'rgy_category_transient_flusher' );
+
+function contact_page_link() {
+	$page = get_page_by_title( 'Contact' );
+	if( $page ) :
+		$output = '';
+		$output .= '<a href="' . get_permalink( $page->ID ) . '"><img src="' . get_template_directory_uri() . '/assets/images/Contact-icon.png" alt="contact icon"></a>';
+	return $output;
+		endif;
+}
+
+add_filter('the_content', 'my_content');
+
+/**
+ * Displays Slider and slider data
+ *
+ */
+function rgy_home_slider() {
+		$output         = '';
+		$output         .= '<div class="slider">';
+
+		$slides                     = get_post_meta( get_the_id(), 'rgy_home_slider_post', true );
+
+		if( $slides ) {
+			foreach ( $slides as $slide ) {
+				$slide_image_id     = get_post_meta( $slide, 'rgy_retreat_image', true );
+				$start_date_stamp   = get_post_meta( $slide, 'rgy_retreat_start_date', true );
+				$start_date         = new DateTime("@$start_date_stamp");
+				$end_date_stamp     = get_post_meta( $slide, 'rgy_retreat_end_date', true );
+				$end_date           = new DateTime("@$end_date_stamp");
+				$image_id           = wp_get_attachment_image_src( $slide_image_id, 'full' );
+				$location           = get_post_meta( $slide, 'rgy_retreat_location', true );
+
+				$output .= '<div class="slide" style="background-image:url(' . $image_id[0] . ');">';
+				$output .= '<div class="date"><meta itemprop="startDate" content="' . $start_date->format('Y-m-d') . '">' . $start_date->format('M d') . ' - ' . $end_date->format('d, Y') . '</meta></div>';
+				$output .= '<h2 class="slide-title">' . get_the_title( $slide ) . '</h2>';
+				$output .= '<div class="location" itemprop="location" itemscope itemtype="http://schema.org/Place">' . $location . '</div>';
+				$output .= '</div>';
+			}
+		}
+	return $output;
+}
+
+
+function rgy_home_schedule() {
+	$output = '';
+	$schedule_first = esc_html( get_post_meta( get_the_id(), 'rgy_home_schedule_title', true ) );
+	if( $schedule_first ) :
+		$output .= '<div class="schedule title">';
+		$output .= wpautop( $schedule_first );
+		$output .= '</div>';
+	endif;
+
+	$schedule_second = get_post_meta( get_the_id(), 'rgy_home_schedule_first', true );
+	if( $schedule_second ) :
+	$output .= '<div class="schedule first">';
+	$output .= wpautop( $schedule_second );
+	$output .= '</div>';
+	endif;
+
+	$schedule_third = get_post_meta( get_the_id(), 'rgy_home_schedule_name', true );
+	if( $schedule_third ) :
+	$output .= '<div class="schedule second">';
+	$output .= wpautop( $schedule_third );
+	$output .= '</div>';
+	endif;
+
+	return $output;
+
+}

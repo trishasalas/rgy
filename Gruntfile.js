@@ -36,7 +36,13 @@ module.exports = function( grunt ) {
 					mangle: { except: ['jQuery'] }
 				},
 				files: {
-					'<%= pkg.themesDir %>/rgy-theme/assets/js/theme.min.js': ['<%= pkg.themesDir %>/rgy-theme/assets/js/src/script1.js']
+					'<%= pkg.themesDir %>/rgy-theme/assets/js/theme.min.js': [
+                        '<%= pkg.themesDir %>/rgy-theme/assets/js/src/script1.js',
+                        '<%= pkg.themesDir %>/rgy-theme/assets/js/src/navigation.js',
+                        '<%= pkg.themesDir %>/rgy-theme/assets/js/src/customizer.js',
+                        '<%= pkg.themesDir %>/rgy-theme/assets/js/src/skip-link-focus-fix.js',
+                        '<%= pkg.themesDir %>/rgy-theme/assets/js/src/slick.js'
+                    ]
 				}
 			}
 

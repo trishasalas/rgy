@@ -1,0 +1,1 @@
+!function($){$(".nav-icon").click(function(){$(".main-navigation").slideToggle("slow",function(){})})}(jQuery);
